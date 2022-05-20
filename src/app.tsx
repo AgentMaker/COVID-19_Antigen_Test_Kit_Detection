@@ -5,7 +5,7 @@ import { Image, message, Button, Result, Spin } from 'antd';
 import { FileImageOutlined } from '@ant-design/icons';
 import { ResultStatusType } from 'antd/lib/result'
 
-const detector = new WebAI.Det('model.onnx.json', 'configs.json')
+const detector = new WebAI.Det('./model.dynamic.quant.onnx.json', './configs.json')
 
 export default function App() {
   const refImg = useRef<HTMLImageElement>(null)
